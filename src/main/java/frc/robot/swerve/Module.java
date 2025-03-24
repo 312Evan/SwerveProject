@@ -57,7 +57,7 @@ public class Module {
                 .pid(0.2, 0.0, 0.0);
 
                 steerConfig.signals.primaryEncoderPositionAlwaysOn(false);
-                steerConfig.signals.primaryEncoderPositionPeriodMs(20);
+                steerConfig.signals.primaryEncoderPositionPeriodMs(10); // Test how changing period affects swerve
 
         TalonFXConfiguration config = new TalonFXConfiguration();
 

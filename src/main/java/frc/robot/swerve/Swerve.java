@@ -29,8 +29,8 @@ public class Swerve {
 
         // DRIVER SETTINGS
         public static int driver = 0;
-        public static double transFactor = 1.0; // factor = x/125, with x being the percentage of our max speed, same for the thing below
-        public static double rotFactor = .30; // .6 for tristan
+        public static double transFactor = 1.0;
+        public static double rotFactor = .30;
 
         // AUTON CONSTANTS
         public double XControllerP = 1.6878;
@@ -58,20 +58,8 @@ public class Swerve {
         }
 
         public static void SwitchDriver(int driver){
-            switch (driver) {
-                case 4: // DEBUG
-                break;
-
-                case 3: // Uriel
-                break;
-
-                case 2: // Jason
-                break;
-                
-                case 1: // Norah
-                break;
-                
-                default: // Shaan is a king
+            switch (driver) {                
+                default:
                 transFactor = 1.0;
                 rotFactor = .5;
                     break;
