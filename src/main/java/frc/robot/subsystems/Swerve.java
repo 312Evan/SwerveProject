@@ -183,6 +183,7 @@ public class Swerve extends SubsystemBase {
         SwerveDriveKinematics.desaturateWheelSpeeds(states, Constants.MAX_VELOCITY);
         for (int i = 0; i < modules.length; i++) {
             states[i].optimize(new Rotation2d(modules[i].angle()));
+            states[i].cosineScale(new Rotation2d(modules[i].angle())); // TODO Test how Cosine compensation affects Swerve
             modules[i].set((states[i].speedMetersPerSecond / Constants.MAX_VELOCITY) * .8,
                     states[i].angle.getRadians());
         }
